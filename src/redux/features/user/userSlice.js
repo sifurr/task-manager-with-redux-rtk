@@ -32,12 +32,17 @@ const userSlice = createSlice({
   reducers: {
 
     setUser: (state, { payload }) => {
-      state.name = payload.name,
-      state.email = payload.email
+      state.name = payload.name;
+      state.email = payload.email;
     },
 
     toggleLoading: (state, {payload}) => {
       state.isLoading = payload;
+    },
+
+    logoutState: (state) => {
+      state.name = "";
+      state.email = "";
     }
 
   },
@@ -69,6 +74,6 @@ const userSlice = createSlice({
   }
 });
 
-export const {setUser, toggleLoading} = userSlice.actions;
+export const {setUser, toggleLoading, logoutState} = userSlice.actions;
 
 export default userSlice.reducer;

@@ -28,7 +28,7 @@ const PrivateRoute = ({ children }) => {
 
       // console.log(user);
     })
-  }, [])
+  }, [dispatch])
 
   if (isLoading) {
     return <Loading />;
